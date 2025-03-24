@@ -1,9 +1,9 @@
-baseURL = 'https://example.org/'
+baseURL = 'https://immortalcodes.github.io'
 languageCode = 'en-in'
 title = 'ImmortalCodes'
 theme = 'PaperMod'
 
-enableRobotsTXT = true
+enableRobotsTXT = false
 buildDrafts = false
 buildFuture = false
 buildExpired = false
@@ -17,10 +17,9 @@ minifyOutput = true
 [params]
 env = "production"
 title = "ImmortalCodes"
-description = "ExampleSite description"
-keywords = ["Blog", "Portfolio", "PaperMod"]
+description = "My 11PM site"
+keywords = ["Blog", "Portfolio", "ImmortalCodes"]
 author = "Me"
-images = ["<link or path of image for opengraph, twitter-cards>"]
 DateFormat = "January 2, 2006"
 defaultTheme = "auto"
 disableThemeToggle = false
@@ -29,7 +28,7 @@ ShowReadingTime = true
 ShowShareButtons = true
 ShowPostNavLinks = true
 ShowBreadCrumbs = true
-ShowCodeCopyButtons = false
+ShowCodeCopyButtons = true
 ShowWordCount = true
 ShowRssButtonInSectionTermList = true
 UseHugoToc = true
@@ -71,20 +70,16 @@ name = "Tags"
 url = "tags"
 
 [params.homeInfoParams]
-Title = "Hi there \U0001F44B"
-Content = "Welcome to my blog"
-
-[[params.socialIcons]]
-name = "x"
-url = "https://x.com/"
-
-[[params.socialIcons]]
-name = "stackoverflow"
-url = "https://stackoverflow.com"
+Title = "ImmortalCodes"
+Content = "Hi I am Madhur, an engineer and I spinned this site for myself at 11PM."
 
 [[params.socialIcons]]
 name = "github"
-url = "https://github.com/"
+url = "https://github.com/immortalcodes"
+
+[[params.socialIcons]]
+name = "linkedin"
+url = "https://www.linkedin.com/in/madhur-jain-37a243218/"
 
 [params.analytics.google]
 SiteVerificationTag = "XYZabc"
@@ -115,28 +110,6 @@ minMatchCharLength = 0
 limit = 10
 keys = ["title", "permalink", "summary", "content"]
 
-[menu]
 
-[[menu.main]]
-identifier = "categories"
-name = "categories"
-url = "/categories/"
-weight = 10
-
-[[menu.main]]
-identifier = "tags"
-name = "tags"
-url = "/tags/"
-weight = 20
-
-[[menu.main]]
-identifier = "example"
-name = "example.org"
-url = "https://example.org"
-weight = 30
-
-pygmentsUseClasses = true
-
-[markup.highlight]
-noClasses = false
-
+[outputs]
+  home = ["HTML", "RSS", "JSON"]

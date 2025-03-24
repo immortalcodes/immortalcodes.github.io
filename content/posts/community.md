@@ -1,8 +1,8 @@
 +++
-title = "The Constantinople"
+title = "Power of Community"
 date = 2024-01-14T07:07:07+01:00
 
-tags = ["first"]
+tags = ["community"]
 author = "Me"
 showToc = true
 TocOpen = false
