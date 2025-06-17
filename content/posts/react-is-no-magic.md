@@ -2,7 +2,7 @@
 title = "React ≠ Magic"
 date = 2025-06-09T12:00:00+01:00
 
-tags = ["community"]
+tags = ["react"]
 author = "Madhur"
 showToc = true
 TocOpen = false

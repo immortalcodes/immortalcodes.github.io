@@ -10,9 +10,9 @@
     <atom:link href="https://immortalcodes.github.io/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>React ≠ Magic</title>
-      <link>https://immortalcodes.github.io/posts/community/</link>
+      <link>https://immortalcodes.github.io/posts/react-is-no-magic/</link>
       <pubDate>Mon, 09 Jun 2025 12:00:00 +0100</pubDate>
-      <guid>https://immortalcodes.github.io/posts/community/</guid>
+      <guid>https://immortalcodes.github.io/posts/react-is-no-magic/</guid>
       <description>Understanding workings of React</description>
     </item>
   </channel>
