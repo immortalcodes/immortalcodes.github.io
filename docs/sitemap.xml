@@ -2,19 +2,25 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>https://immortalcodes.github.io/tags/git/</loc>
+    <lastmod>2025-08-06T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://immortalcodes.github.io/posts/handmade-git-commands/</loc>
+    <lastmod>2025-08-06T12:00:00+01:00</lastmod>
+  </url><url>
     <loc>https://immortalcodes.github.io/</loc>
-    <lastmod>2025-06-09T12:00:00+01:00</lastmod>
+    <lastmod>2025-08-06T12:00:00+01:00</lastmod>
   </url><url>
     <loc>https://immortalcodes.github.io/posts/</loc>
-    <lastmod>2025-06-09T12:00:00+01:00</lastmod>
+    <lastmod>2025-08-06T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://immortalcodes.github.io/tags/</loc>
+    <lastmod>2025-08-06T12:00:00+01:00</lastmod>
   </url><url>
     <loc>https://immortalcodes.github.io/tags/react/</loc>
     <lastmod>2025-06-09T12:00:00+01:00</lastmod>
   </url><url>
     <loc>https://immortalcodes.github.io/posts/react-is-no-magic/</loc>
-    <lastmod>2025-06-09T12:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://immortalcodes.github.io/tags/</loc>
     <lastmod>2025-06-09T12:00:00+01:00</lastmod>
   </url><url>
     <loc>https://immortalcodes.github.io/categories/</loc>
