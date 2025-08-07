@@ -65,7 +65,8 @@ Don't forget to source your shell's config file (e.g., `source ~/.bashrc` or `so
 
 ## Walking through an example:
 
-Let's look at a real-world example of a handy custom Git command: **`git-ignore-local`**.
+Let's look at a real-world example of a handy custom Git command: **`git-ignore-local`**
+Repo: https://github.com/immortalcodes/git-ignore-local.
 
 This tool addresses a common annoyance: sometimes you want to ignore files in your local Git repository without adding them to the project's `.gitignore` file. This is perfect for machine-specific configurations, temporary debug logs, or IDE-generated files that clutter your workspace but shouldn't be shared.
 
