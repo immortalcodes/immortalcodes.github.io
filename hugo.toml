@@ -1,14 +1,11 @@
 baseURL = 'https://immortalcodes.github.io'
-languageCode = 'en-in'
+locale = 'en-IN'
 title = 'ImmortalCodes'
-theme = 'PaperMod'
 
-enableRobotsTXT = false
+enableRobotsTXT = true
 buildDrafts = false
 buildFuture = false
 buildExpired = false
-
-googleAnalytics = "UA-123-45"
 
 [minify]
 disableXML = true
@@ -17,99 +14,43 @@ minifyOutput = true
 [params]
 env = "production"
 title = "ImmortalCodes"
-description = "My 11PM site"
-keywords = ["Blog", "Portfolio", "ImmortalCodes"]
-author = "Me"
+description = "Madhur Jain's personal site for engineering notes, projects, talks, and live browser experiments."
+tagline = "More than a blog"
+author = "Madhur Jain"
 DateFormat = "January 2, 2006"
-defaultTheme = "auto"
-disableThemeToggle = false
-
-ShowReadingTime = true
-ShowShareButtons = true
-ShowPostNavLinks = true
-ShowBreadCrumbs = true
-ShowCodeCopyButtons = true
-ShowWordCount = true
-ShowRssButtonInSectionTermList = true
-UseHugoToc = true
-disableSpecial1stPost = false
-disableScrollToTop = false
-comments = false
-hidemeta = false
-hideSummary = false
-showtoc = false
-tocopen = false
-
-[params.assets]
-favicon = "<link / abs url>"
-favicon16x16 = "<link / abs url>"
-favicon32x32 = "<link / abs url>"
-apple_touch_icon = "<link / abs url>"
-safari_pinned_tab = "<link / abs url>"
-
-[params.label]
-text = "Home"
-icon = "/apple-touch-icon.png"
-iconHeight = 35
-
-[params.profileMode]
-enabled = false
-title = "ExampleSite"
-subtitle = "This is subtitle"
-imageUrl = "<img location>"
-imageWidth = 120
-imageHeight = 120
-imageTitle = "my image"
-
-[[params.profileMode.buttons]]
-name = "Posts"
-url = "posts"
-
-[[params.profileMode.buttons]]
-name = "Tags"
-url = "tags"
-
-[params.homeInfoParams]
-Title = "ImmortalCodes"
-Content = "Hi I am Madhur, an engineer and I spinned this site for myself at 11PM."
-
-[[params.socialIcons]]
-name = "github"
-url = "https://github.com/immortalcodes"
-
-[[params.socialIcons]]
-name = "linkedin"
-url = "https://www.linkedin.com/in/madhur-jain-37a243218/"
-
-[params.analytics.google]
-SiteVerificationTag = "XYZabc"
-
-[params.analytics.bing]
-SiteVerificationTag = "XYZabc"
-
-[params.analytics.yandex]
-SiteVerificationTag = "XYZabc"
-
-[params.cover]
-hidden = true
-hiddenInList = true
-hiddenInSingle = true
-
-[params.editPost]
-URL = "https://github.com/<path_to_repo>/content"
-Text = "Suggest Changes"
-appendFilePath = true
-
-[params.fuseOpts]
-isCaseSensitive = false
-shouldSort = true
-location = 0
-distance = 1000
-threshold = 0.4
-minMatchCharLength = 0
-limit = 10
-keys = ["title", "permalink", "summary", "content"]
-
+github = "https://github.com/immortalcodes"
+linkedin = "https://www.linkedin.com/in/madhur-jain-37a243218/"
+intro = "I am Madhur Jain, an engineer building practical software, writing down hard-won lessons, and keeping a small lab of interactive experiments alive on the web."
 
 [outputs]
-  home = ["HTML", "RSS", "JSON"]
+home = ["HTML", "RSS"]
+
+[[menus.main]]
+name = "Home"
+url = "/"
+weight = 10
+
+[[menus.main]]
+name = "Projects"
+url = "/projects/"
+weight = 20
+
+[[menus.main]]
+name = "Talks"
+url = "/talks/"
+weight = 30
+
+[[menus.main]]
+name = "Games"
+url = "/games/"
+weight = 40
+
+[[menus.main]]
+name = "Blog"
+url = "/posts/"
+weight = 50
+
+[[menus.main]]
+name = "Archive"
+url = "/archive/"
+weight = 60

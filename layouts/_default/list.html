@@ -1,0 +1,22 @@
+{{ define "main" }}
+<section class="page-hero shell">
+  <p class="eyebrow">{{ if eq .Section "posts" }}Blog{{ else }}{{ .Title }}{{ end }}</p>
+  <h1>{{ if eq .Section "posts" }}Writing{{ else }}{{ .Title }}{{ end }}</h1>
+  {{ with .Description }}<p>{{ . }}</p>{{ end }}
+</section>
+
+<section class="shell section-block">
+  {{- if .RegularPages }}
+  <div class="post-list">
+    {{- range .RegularPages.ByDate.Reverse }}
+      {{ partial "card.html" . }}
+    {{- end }}
+  </div>
+  {{- else }}
+  <div class="empty-panel">
+    <h2>{{ .Params.empty_state | default "Nothing published here yet" }}</h2>
+    <p>{{ .Params.empty_help | default "Check back after this section has entries." }}</p>
+  </div>
+  {{- end }}
+</section>
+{{ end }}

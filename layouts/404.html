@@ -1,0 +1,11 @@
+{{ define "main" }}
+<section class="page-hero shell">
+  <p class="eyebrow">404</p>
+  <h1>Page not found</h1>
+  <p>The page moved, vanished, or never existed. The main navigation can get you back to the useful parts of the site.</p>
+  <div class="hero-actions">
+    <a class="button primary" href="{{ "/" | relURL }}">Back home</a>
+    <a class="button secondary" href="{{ "/archive/" | relURL }}">Browse archive</a>
+  </div>
+</section>
+{{ end }}

@@ -1,0 +1,46 @@
+{{ define "main" }}
+<article class="single-page shell">
+  <header class="page-hero narrow">
+    <p class="eyebrow">{{ with .Section }}{{ . }}{{ else }}Page{{ end }}</p>
+    <h1>{{ .Title }}</h1>
+    {{ with .Description }}<p>{{ . }}</p>{{ end }}
+    {{ if .Date }}<time datetime="{{ .Date.Format "2006-01-02" }}">{{ .Date.Format "January 2, 2006" }}</time>{{ end }}
+  </header>
+
+  <div class="content-body">
+    {{ .Content }}
+  </div>
+
+  {{- if eq .Params.game "code-breaker" }}
+  <section class="game-card" data-code-breaker aria-labelledby="code-breaker-title">
+    <div class="game-header">
+      <p class="eyebrow">Playable in the browser</p>
+      <h2 id="code-breaker-title">Guess the four-digit access code</h2>
+      <p>Enter four digits. Exact matches are correct digit and position; misplaced matches are correct digits in the wrong position.</p>
+    </div>
+    <form id="code-breaker-form" class="game-form">
+      <label for="code-breaker-guess">Your guess</label>
+      <div class="guess-row">
+        <input id="code-breaker-guess" name="guess" inputmode="numeric" autocomplete="off" pattern="[0-9]{4}" maxlength="4" minlength="4" placeholder="1234" required aria-describedby="code-breaker-help">
+        <button class="button primary" type="submit">Submit guess</button>
+      </div>
+      <p id="code-breaker-help" class="help-text">Use exactly four digits. You have 8 attempts remaining.</p>
+    </form>
+    <div class="game-status" aria-live="polite" data-code-breaker-status>New code generated. 8 attempts remaining.</div>
+    <ol class="guess-history" data-code-breaker-history aria-label="Guess history"></ol>
+    <button class="button secondary" type="button" data-code-breaker-reset>Reset game</button>
+  </section>
+  {{- end }}
+
+  {{- if eq .RelPermalink "/archive/" }}
+  <section class="archive-list" aria-labelledby="archive-heading">
+    <h2 id="archive-heading">All writing</h2>
+    <div class="post-list">
+      {{- range (where .Site.RegularPages "Section" "posts").ByDate.Reverse }}
+        {{ partial "card.html" . }}
+      {{- end }}
+    </div>
+  </section>
+  {{- end }}
+</article>
+{{ end }}

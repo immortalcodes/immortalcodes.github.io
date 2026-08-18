@@ -1,0 +1,8 @@
+<article class="content-card">
+  <div>
+    <p class="card-meta">{{ with .Section }}{{ . }}{{ end }}{{ if .Date }} · {{ .Date.Format "Jan 2, 2006" }}{{ end }}</p>
+    <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    {{ with .Description }}<p>{{ . }}</p>{{ else }}{{ with .Summary }}<p>{{ . | plainify | truncate 140 }}</p>{{ end }}{{ end }}
+  </div>
+  <a class="text-link" href="{{ .RelPermalink }}" aria-label="Open {{ .Title }}">Open</a>
+</article>
