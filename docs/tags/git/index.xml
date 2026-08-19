@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>Git on ImmortalCodes</title>
-		<link>https://immortalcodes.github.io/tags/git/</link>
-		<description>Recent content in Git on ImmortalCodes</description>
-		<generator>Hugo</generator>
-		<language>en-IN</language>
-		
-		
-		
-		
-			<lastBuildDate>Wed, 06 Aug 2025 12:00:00 +0100</lastBuildDate>
-		
-			<atom:link href="https://immortalcodes.github.io/tags/git/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>Handmade Git Commands</title>
-				<link>https://immortalcodes.github.io/posts/handmade-git-commands/</link>
-				<pubDate>Wed, 06 Aug 2025 12:00:00 +0100</pubDate>
-				<guid>https://immortalcodes.github.io/posts/handmade-git-commands/</guid>
-				<description>&lt;p&gt;&lt;img src=&#34;https://immortalcodes.github.io/images/custom-git-commands.png&#34; alt=&#34;Custom git commands&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;handmake-your-git-commands-at-home&#34;&gt;Handmake your Git commands at home&lt;/h2&gt;&#xA;&lt;p&gt;Long story short, you can extend Git&amp;rsquo;s functionality by creating your own custom commands! It&amp;rsquo;s simpler than you think. Here are 3 steps:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create an &lt;strong&gt;executable binary&lt;/strong&gt; to do the things you want your git command to do. This could be a shell script, or a program in any language.&lt;/li&gt;&#xA;&lt;li&gt;Name it &lt;code&gt;git-&amp;lt;command-name&amp;gt;&lt;/code&gt;. For example, if you want a command called &lt;code&gt;git cleanup-branches&lt;/code&gt;, you&amp;rsquo;d name your script &lt;code&gt;git-cleanup-branches&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Put it in your &lt;strong&gt;$PATH&lt;/strong&gt; and make it executable (&lt;code&gt;chmod +x /path/to/your/script&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now you can use your new Git power via:&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>Git on ImmortalCodes</title>
+    <link>http://localhost:35515/tags/git/</link>
+    <description>Recent content in Git on ImmortalCodes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Wed, 06 Aug 2025 12:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:35515/tags/git/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Handmade Git Commands</title>
+      <link>http://localhost:35515/posts/handmade-git-commands/</link>
+      <pubDate>Wed, 06 Aug 2025 12:00:00 +0100</pubDate>
+      <guid>http://localhost:35515/posts/handmade-git-commands/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:35515/images/custom-git-commands.png&#34; alt=&#34;Custom git commands&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;handmake-your-git-commands-at-home&#34;&gt;Handmake your Git commands at home&lt;/h2&gt;&#xA;&lt;p&gt;Long story short, you can extend Git&amp;rsquo;s functionality by creating your own custom commands! It&amp;rsquo;s simpler than you think. Here are 3 steps:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create an &lt;strong&gt;executable binary&lt;/strong&gt; to do the things you want your git command to do. This could be a shell script, or a program in any language.&lt;/li&gt;&#xA;&lt;li&gt;Name it &lt;code&gt;git-&amp;lt;command-name&amp;gt;&lt;/code&gt;. For example, if you want a command called &lt;code&gt;git cleanup-branches&lt;/code&gt;, you&amp;rsquo;d name your script &lt;code&gt;git-cleanup-branches&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Put it in your &lt;strong&gt;$PATH&lt;/strong&gt; and make it executable (&lt;code&gt;chmod +x /path/to/your/script&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now you can use your new Git power via:&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

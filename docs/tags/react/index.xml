@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
-	<channel>
-		<title>React on ImmortalCodes</title>
-		<link>https://immortalcodes.github.io/tags/react/</link>
-		<description>Recent content in React on ImmortalCodes</description>
-		<generator>Hugo</generator>
-		<language>en-IN</language>
-		
-		
-		
-		
-			<lastBuildDate>Mon, 09 Jun 2025 12:00:00 +0100</lastBuildDate>
-		
-			<atom:link href="https://immortalcodes.github.io/tags/react/index.xml" rel="self" type="application/rss+xml" />
-			<item>
-				<title>React ≠ Magic</title>
-				<link>https://immortalcodes.github.io/posts/react-is-no-magic/</link>
-				<pubDate>Mon, 09 Jun 2025 12:00:00 +0100</pubDate>
-				<guid>https://immortalcodes.github.io/posts/react-is-no-magic/</guid>
-				<description>&lt;p&gt;&lt;img src=&#34;https://immortalcodes.github.io/images/react_cover_2.png&#34; alt=&#34;React Cover&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;under-the-hood-of-react-why-it-feels-like-magic-but-isnt&#34;&gt;Under the Hood of React: Why It Feels Like Magic (But Isn’t)&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-this-blog&#34;&gt;Why this Blog&lt;/h2&gt;&#xA;&lt;p&gt;Back in school days starting with web development was fairly simple — HTML formed the structure, CSS was all beautiful decorations (and some movements), and JS brought logic and life to the site.&lt;/p&gt;&#xA;&lt;p&gt;But, as any dev would have it, I encountered React. And oh boy, it seemed magical — yes, almost like you now know the language of elves and can now craft spectacular &lt;em&gt;Elden sites&lt;/em&gt;.&lt;/p&gt;</description>
-			</item>
-	</channel>
+  <channel>
+    <title>React on ImmortalCodes</title>
+    <link>http://localhost:35515/tags/react/</link>
+    <description>Recent content in React on ImmortalCodes</description>
+    <generator>Hugo</generator>
+    <language>en</language>
+    <lastBuildDate>Mon, 09 Jun 2025 12:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:35515/tags/react/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>React ≠ Magic</title>
+      <link>http://localhost:35515/posts/react-is-no-magic/</link>
+      <pubDate>Mon, 09 Jun 2025 12:00:00 +0100</pubDate>
+      <guid>http://localhost:35515/posts/react-is-no-magic/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:35515/images/react_cover_2.png&#34; alt=&#34;React Cover&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;under-the-hood-of-react-why-it-feels-like-magic-but-isnt&#34;&gt;Under the Hood of React: Why It Feels Like Magic (But Isn’t)&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-this-blog&#34;&gt;Why this Blog&lt;/h2&gt;&#xA;&lt;p&gt;Back in school days starting with web development was fairly simple — HTML formed the structure, CSS was all beautiful decorations (and some movements), and JS brought logic and life to the site.&lt;/p&gt;&#xA;&lt;p&gt;But, as any dev would have it, I encountered React. And oh boy, it seemed magical — yes, almost like you now know the language of elves and can now craft spectacular &lt;em&gt;Elden sites&lt;/em&gt;.&lt;/p&gt;</description>
+    </item>
+  </channel>
 </rss>

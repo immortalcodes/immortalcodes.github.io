@@ -1,6 +1,7 @@
 baseURL = 'https://immortalcodes.github.io'
 locale = 'en-IN'
 title = 'ImmortalCodes'
+publishDir = 'docs'
 
 enableRobotsTXT = true
 buildDrafts = false
