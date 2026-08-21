@@ -49,8 +49,16 @@ def main() -> None:
     assert_has(
         "talks/index.html",
         "Talks",
-        "No talks published yet",
-        "Notes, decks, and recordings from past talks will appear here.",
+        "Juju Does Everything",
+    )
+    assert_has(
+        "talks/juju-does-everything/index.html",
+        "Juju Does Everything. Here Is What That Is Like.",
+        "UbuCon Asia 2026",
+        "on-stage-wide.png",
+        "on-stage-portrait.png",
+        "venue.png",
+        "audience.png",
     )
     assert_has(
         "games/index.html",

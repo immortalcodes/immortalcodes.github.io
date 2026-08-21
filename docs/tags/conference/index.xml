@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Talks on ImmortalCodes</title>
-    <link>https://blogs.immortalcodes.com/talks/</link>
-    <description>Recent content in Talks on ImmortalCodes</description>
+    <title>Conference on ImmortalCodes</title>
+    <link>https://blogs.immortalcodes.com/tags/conference/</link>
+    <description>Recent content in Conference on ImmortalCodes</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 08 Aug 2026 13:40:00 +0800</lastBuildDate>
-    <atom:link href="https://blogs.immortalcodes.com/talks/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blogs.immortalcodes.com/tags/conference/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Juju Does Everything. Here Is What That Is Like.</title>
       <link>https://blogs.immortalcodes.com/talks/juju-does-everything/</link>

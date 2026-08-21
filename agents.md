@@ -20,5 +20,5 @@ The build is actual copy pasted into the /docs folder because that is the root o
 ## Resources
 Hugo docs - https://gohugo.io/documentation/
 Hugo themes - https://themes.gohugo.io/
-
+When writing content look into - ./content/agents.md
 
