@@ -33,22 +33,24 @@ def main() -> None:
         "index.html",
         "Projects",
         "Talks",
-        "Live Games",
         "Latest writing",
-        "More than a blog",
+        "site-backdrop",
+        "https://x.com/i_m_mortal_mj",
     )
+    # The site is dark-only; no runtime theme switching should survive a build.
+    assert_not_has("index.html", "theme-toggle", "data-theme")
     assert_has(
         "projects/index.html",
         "Projects",
         "No project write-ups yet",
-        "Add projects by creating Markdown files in content/projects/",
+        "Write-ups for shipped work and experiments will appear here.",
         "aria-current=page>Projects",
     )
     assert_has(
         "talks/index.html",
         "Talks",
         "No talks published yet",
-        "Add talks by creating Markdown files in content/talks/",
+        "Notes, decks, and recordings from past talks will appear here.",
     )
     assert_has(
         "games/index.html",
@@ -63,8 +65,29 @@ def main() -> None:
     )
     assert_has("404.html", "Page not found", "Back home")
     assert_has("CNAME", "blogs.immortalcodes.com")
-    assert_has("css/site.css", ":focus-visible", "prefers-reduced-motion", "@media (max-width: 720px)")
+    assert_has(
+        "css/site.css",
+        ":focus-visible",
+        "prefers-reduced-motion",
+        "@media (max-width: 720px)",
+        # The backdrop field: ridges, colour zones and film grain.
+        "site-backdrop",
+        "repeating-linear-gradient",
+        "zone-ember",
+        "feTurbulence",
+        # Dark pools that follow the text, and chrome that fades via masks
+        # rather than being separated by borders.
+        "--pool",
+        "mask-image",
+        "backdrop-filter",
+        "overflow-x: clip",
+        "flex: 1 0 auto",
+        "social-button",
+    )
+    assert_not_has("css/site.css", "theme-toggle", "prefers-color-scheme")
     assert_has("js/site.js", "data-code-breaker", "attempts remaining")
+    assert_not_has("js/site.js", "data-theme", "localStorage")
+    assert_has("favicon.svg", "ImmortalCodes")
     assert_has("index.xml", "React ≠ Magic", "Handmade Git Commands")
     assert_not_has("index.xml", "<title>Archive</title>", "0001")
     print("smoke_site: all generated site checks passed")

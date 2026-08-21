@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tags on ImmortalCodes</title>
-    <link>http://localhost:35515/tags/</link>
+    <link>https://blogs.immortalcodes.com/tags/</link>
     <description>Recent content in Tags on ImmortalCodes</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Wed, 06 Aug 2025 12:00:00 +0100</lastBuildDate>
-    <atom:link href="http://localhost:35515/tags/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blogs.immortalcodes.com/tags/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Git</title>
-      <link>http://localhost:35515/tags/git/</link>
+      <link>https://blogs.immortalcodes.com/tags/git/</link>
       <pubDate>Wed, 06 Aug 2025 12:00:00 +0100</pubDate>
-      <guid>http://localhost:35515/tags/git/</guid>
+      <guid>https://blogs.immortalcodes.com/tags/git/</guid>
       <description></description>
     </item>
     <item>
       <title>React</title>
-      <link>http://localhost:35515/tags/react/</link>
+      <link>https://blogs.immortalcodes.com/tags/react/</link>
       <pubDate>Mon, 09 Jun 2025 12:00:00 +0100</pubDate>
-      <guid>http://localhost:35515/tags/react/</guid>
+      <guid>https://blogs.immortalcodes.com/tags/react/</guid>
       <description></description>
     </item>
   </channel>

@@ -3,6 +3,7 @@
   <p class="eyebrow">{{ if eq .Section "posts" }}Blog{{ else }}{{ .Title }}{{ end }}</p>
   <h1>{{ if eq .Section "posts" }}Writing{{ else }}{{ .Title }}{{ end }}</h1>
   {{ with .Description }}<p>{{ . }}</p>{{ end }}
+  {{ .Content }}
 </section>
 
 <section class="shell section-block">

@@ -1,4 +1,4 @@
-baseURL = 'https://immortalcodes.github.io'
+baseURL = 'https://blogs.immortalcodes.com'
 locale = 'en-IN'
 title = 'ImmortalCodes'
 publishDir = 'docs'
@@ -16,12 +16,13 @@ minifyOutput = true
 env = "production"
 title = "ImmortalCodes"
 description = "Madhur Jain's personal site for engineering notes, projects, talks, and live browser experiments."
-tagline = "More than a blog"
+tagline = "Site for myself at 11PM"
 author = "Madhur Jain"
 DateFormat = "January 2, 2006"
 github = "https://github.com/immortalcodes"
 linkedin = "https://www.linkedin.com/in/madhur-jain-37a243218/"
-intro = "I am Madhur Jain, an engineer building practical software, writing down hard-won lessons, and keeping a small lab of interactive experiments alive on the web."
+x = "https://x.com/i_m_mortal_mj"
+intro = "I am Madhur Jain, an engineer."
 
 [outputs]
 home = ["HTML", "RSS"]

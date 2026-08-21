@@ -10,34 +10,12 @@
         <a class="button secondary" href="{{ "/posts/" | relURL }}">Read the blog</a>
       </div>
     </div>
-    <aside class="hero-panel" aria-label="Site highlights">
-      <p class="panel-kicker">Current shape</p>
-      <dl class="stat-list">
-        <div><dt>Writing</dt><dd>{{ len (where .Site.RegularPages "Section" "posts") }} notes</dd></div>
-        <div><dt>Games</dt><dd>1 playable lab</dd></div>
-        <div><dt>Focus</dt><dd>Readable, practical, navigable</dd></div>
-      </dl>
-    </aside>
-  </div>
-</section>
-
-<section class="shell section-block" aria-labelledby="explore-heading">
-  <div class="section-heading">
-    <p class="eyebrow">Explore</p>
-    <h2 id="explore-heading">Choose the mode you came for.</h2>
-  </div>
-  <div class="card-grid feature-grid">
-    <a class="feature-card" href="{{ "/projects/" | relURL }}"><span>Projects</span><p>Build notes and durable technical work, ready for real entries.</p></a>
-    <a class="feature-card" href="{{ "/talks/" | relURL }}"><span>Talks</span><p>Session abstracts, slides, and speaking notes when they are published.</p></a>
-    <a class="feature-card" href="{{ "/games/" | relURL }}"><span>Live Games</span><p>Small browser-native experiments that can be played without leaving the site.</p></a>
-    <a class="feature-card" href="{{ "/posts/" | relURL }}"><span>Writing</span><p>Long-form engineering notes kept one click away from every page.</p></a>
   </div>
 </section>
 
 <section class="shell section-block split-block" aria-labelledby="latest-heading">
   <div class="section-heading">
-    <p class="eyebrow">Latest writing</p>
-    <h2 id="latest-heading">Recent notes from the blog.</h2>
+    <h2 id="latest-heading" class="eyebrow">Latest writing</h2>
   </div>
   <div class="post-list compact-list">
     {{- range first 3 (where .Site.RegularPages "Section" "posts") }}

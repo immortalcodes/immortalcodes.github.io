@@ -2,39 +2,39 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://localhost:35515/games/code-breaker/</loc>
+    <loc>https://blogs.immortalcodes.com/games/code-breaker/</loc>
     <lastmod>2026-08-17T00:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:35515/</loc>
+    <loc>https://blogs.immortalcodes.com/</loc>
     <lastmod>2026-08-17T00:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:35515/games/</loc>
+    <loc>https://blogs.immortalcodes.com/games/</loc>
     <lastmod>2026-08-17T00:00:00+05:30</lastmod>
   </url><url>
-    <loc>http://localhost:35515/tags/git/</loc>
+    <loc>https://blogs.immortalcodes.com/tags/git/</loc>
     <lastmod>2025-08-06T12:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:35515/posts/handmade-git-commands/</loc>
+    <loc>https://blogs.immortalcodes.com/posts/handmade-git-commands/</loc>
     <lastmod>2025-08-06T12:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:35515/posts/</loc>
+    <loc>https://blogs.immortalcodes.com/posts/</loc>
     <lastmod>2025-08-06T12:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:35515/tags/</loc>
+    <loc>https://blogs.immortalcodes.com/tags/</loc>
     <lastmod>2025-08-06T12:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:35515/tags/react/</loc>
+    <loc>https://blogs.immortalcodes.com/tags/react/</loc>
     <lastmod>2025-06-09T12:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:35515/posts/react-is-no-magic/</loc>
+    <loc>https://blogs.immortalcodes.com/posts/react-is-no-magic/</loc>
     <lastmod>2025-06-09T12:00:00+01:00</lastmod>
   </url><url>
-    <loc>http://localhost:35515/archive/</loc>
+    <loc>https://blogs.immortalcodes.com/archive/</loc>
   </url><url>
-    <loc>http://localhost:35515/categories/</loc>
+    <loc>https://blogs.immortalcodes.com/categories/</loc>
   </url><url>
-    <loc>http://localhost:35515/projects/</loc>
+    <loc>https://blogs.immortalcodes.com/projects/</loc>
   </url><url>
-    <loc>http://localhost:35515/talks/</loc>
+    <loc>https://blogs.immortalcodes.com/talks/</loc>
   </url>
 </urlset>

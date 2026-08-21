@@ -2,24 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ImmortalCodes</title>
-    <link>http://localhost:35515/</link>
+    <link>https://blogs.immortalcodes.com/</link>
     <description>Madhur Jain&#39;s personal site for engineering notes, projects, talks, and live browser experiments.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Wed, 19 Aug 2026 08:09:15 +0530</lastBuildDate>
-    <atom:link href="http://localhost:35515/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 21 Aug 2026 13:27:52 +0530</lastBuildDate>
+    <atom:link href="https://blogs.immortalcodes.com/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Handmade Git Commands</title>
-      <link>http://localhost:35515/posts/handmade-git-commands/</link>
+      <link>https://blogs.immortalcodes.com/posts/handmade-git-commands/</link>
       <pubDate>Wed, 06 Aug 2025 12:00:00 +0100</pubDate>
-      <guid>http://localhost:35515/posts/handmade-git-commands/</guid>
+      <guid>https://blogs.immortalcodes.com/posts/handmade-git-commands/</guid>
       <description>Writing your custom git commands</description>
     </item>
     <item>
       <title>React ≠ Magic</title>
-      <link>http://localhost:35515/posts/react-is-no-magic/</link>
+      <link>https://blogs.immortalcodes.com/posts/react-is-no-magic/</link>
       <pubDate>Mon, 09 Jun 2025 12:00:00 +0100</pubDate>
-      <guid>http://localhost:35515/posts/react-is-no-magic/</guid>
+      <guid>https://blogs.immortalcodes.com/posts/react-is-no-magic/</guid>
       <description>Understanding workings of React</description>
     </item>
   </channel>

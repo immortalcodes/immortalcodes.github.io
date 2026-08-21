@@ -2,7 +2,7 @@
 title = "Talks"
 description = "Sessions, workshops, and presentation notes."
 empty_state = "No talks published yet"
-empty_help = "Add talks by creating Markdown files in content/talks/."
+empty_help = "Notes, decks, and recordings from past talks will appear here."
 +++
 
-Talks will collect session abstracts, slides, recordings, and speaking notes when they are ready to publish.
+Slides, recordings, and notes from sessions I've given.

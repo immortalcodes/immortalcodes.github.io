@@ -1,32 +1,46 @@
+/*
+  ImmortalCodes visual system.
+
+  The site is dark-only. A fixed backdrop element paints a vivid field of
+  colour zones behind everything, and content earns its readability from
+  soft "pools" of darkness rather than from boxes and dividing lines.
+*/
+
 :root {
-  color-scheme: light dark;
-  --bg: #fafafa;
-  --surface: #ffffff;
-  --surface-strong: #f4f4f5;
-  --text: #09090b;
-  --muted: #52525b;
-  --border: #e4e4e7;
-  --accent: #2563eb;
-  --accent-strong: #1d4ed8;
-  --accent-soft: #dbeafe;
-  --shadow: 0 24px 60px rgb(15 23 42 / 0.08);
+  color-scheme: dark;
+
+  /* Foreground */
+  --text: #f7edea;
+  --muted: #c5b3b6;
+  --ink: #180805;
+
+  /* Accents.
+     --accent-magenta is a lifted version of --zone-magenta. The backdrop zone
+     itself is too dark to carry --ink text at 4.5:1, so filled controls use
+     this brighter tint instead. */
+  --accent: #ff8a4c;
+  --accent-strong: #ffb289;
+  --accent-soft: rgb(255 138 76 / 0.14);
+  --accent-magenta: #ff4d94;
+
+  /* Backdrop colour zones, sampled from the reference composition */
+  --zone-ember: #ff5b23;
+  --zone-flame: #c81e3c;
+  --zone-magenta: #d61e79;
+  --zone-steel: #2f4b6e;
+  --zone-void: #04050b;
+  --bg: #05040a;
+
+  /* Materials */
+  --pool: rgb(6 4 10 / 0.86);
+  --surface: rgb(12 8 16 / 0.72);
+  --surface-strong: rgb(18 12 22 / 0.8);
+  --hairline: rgb(255 255 255 / 0.1);
+  --hairline-strong: rgb(255 255 255 / 0.2);
+  --shadow: 0 26px 60px rgb(0 0 0 / 0.5);
+
   --radius: 24px;
   --shell: min(1120px, calc(100vw - 32px));
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --bg: #09090b;
-    --surface: #18181b;
-    --surface-strong: #27272a;
-    --text: #fafafa;
-    --muted: #c4c4cc;
-    --border: #3f3f46;
-    --accent: #60a5fa;
-    --accent-strong: #93c5fd;
-    --accent-soft: #172554;
-    --shadow: 0 24px 60px rgb(0 0 0 / 0.35);
-  }
 }
 
 * {
@@ -35,26 +49,144 @@
 
 html {
   scroll-behavior: smooth;
+  background: var(--bg);
+  overflow-x: clip;
 }
 
 body {
-  margin: 0;
+  display: flex;
+  flex-direction: column;
   min-height: 100vh;
-  background: radial-gradient(circle at top left, var(--accent-soft), transparent 34rem), var(--bg);
+  min-height: 100svh;
+  margin: 0;
+  background: var(--bg);
+  overflow-x: clip;
   color: var(--text);
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   font-size: 16px;
   line-height: 1.6;
 }
 
+main {
+  position: relative;
+  z-index: 1;
+  flex: 1 0 auto;
+  overflow-x: clip;
+}
+
+/*
+  The backdrop is fixed so the field stays still while content scrolls. That
+  stillness is what lets the blurred header and footer read as glass.
+
+  Layers, painted front to back:
+    1. broad specular folds, like light moving across pleated glass
+    2. slow illumination changes that keep neighbouring folds from matching
+    3. colour zones: ember, magenta, steel, and a near-black void
+    4. the base diagonal sweep
+*/
+.site-backdrop {
+  position: fixed;
+  z-index: 0;
+  inset: 0;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    /*
+      One complete fold is 40px wide. Its narrow lit edge rolls gradually into
+      a broad midtone and then a deep shadow, rather than switching between
+      opaque bars. Low-opacity highlights keep the texture behind the content.
+    */
+    repeating-linear-gradient(
+      90deg,
+      rgb(255 196 158 / 0.14) 0,
+      rgb(255 161 114 / 0.07) 3px,
+      transparent 9px,
+      rgb(0 0 0 / 0.08) 17px,
+      rgb(0 0 0 / 0.36) 27px,
+      rgb(0 0 0 / 0.62) 33px,
+      rgb(0 0 0 / 0.28) 37px,
+      transparent 40px
+    ),
+    /*
+      A much slower, soft pass changes the light received by groups of folds.
+      Because 160px is four fold widths, it creates broad glossy and dark
+      regions without the noisy moire produced by competing short periods.
+    */
+    repeating-linear-gradient(
+      90deg,
+      rgb(255 119 72 / 0.06) 0,
+      transparent 36px,
+      rgb(0 0 0 / 0.12) 68px,
+      rgb(0 0 0 / 0.38) 101px,
+      rgb(0 0 0 / 0.09) 134px,
+      transparent 160px
+    ),
+    radial-gradient(ellipse 46% 42% at 4% 8%, var(--zone-ember) 0%, transparent 68%),
+    radial-gradient(ellipse 40% 40% at 0% 90%, var(--zone-magenta) 0%, transparent 70%),
+    radial-gradient(ellipse 46% 48% at 72% 6%, var(--zone-steel) 0%, transparent 72%),
+    radial-gradient(ellipse 60% 64% at 88% 52%, var(--zone-void) 14%, transparent 74%),
+    linear-gradient(152deg, var(--zone-flame) 0%, #2b1030 40%, var(--zone-void) 76%, #0a1020 100%);
+}
+
+/* A restrained dark wash softens the field, with extra depth under content. */
+.site-backdrop::before {
+  position: absolute;
+  inset: 0;
+  content: "";
+  background:
+    linear-gradient(rgb(5 4 10 / 0.14), rgb(5 4 10 / 0.14)),
+    radial-gradient(ellipse 62% 108% at 50% 50%, rgb(4 3 8 / 0.66) 0%, rgb(4 3 8 / 0.32) 46%, transparent 76%);
+}
+
+/* Fine grain, so the wide gradients do not band on large displays. */
+.site-backdrop::after {
+  position: absolute;
+  inset: 0;
+  content: "";
+  opacity: 0.035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 160 160' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)' opacity='.85'/%3E%3C/svg%3E");
+  mix-blend-mode: soft-light;
+}
+
+/*
+  Text pools.
+
+  Each block of copy casts a soft shadow of darkness behind itself. The blur
+  and the wide transparent falloff keep the transition smooth, so the field
+  fades to near-black under text without drawing an edge anywhere.
+*/
+.hero-copy,
+.page-hero,
+.section-heading,
+.content-body,
+.archive-list,
+.empty-state {
+  position: relative;
+  isolation: isolate;
+}
+
+.hero-copy::before,
+.page-hero::before,
+.section-heading::before,
+.content-body::before,
+.archive-list::before,
+.empty-state::before {
+  position: absolute;
+  z-index: -1;
+  inset: -40px -56px;
+  content: "";
+  background: radial-gradient(120% 116% at 50% 50%, var(--pool) 0%, rgb(6 4 10 / 0.52) 52%, transparent 78%);
+  filter: blur(30px);
+  pointer-events: none;
+}
+
 body::selection {
   background: var(--accent);
-  color: #fff;
+  color: var(--ink);
 }
 
 a {
   color: inherit;
-  text-decoration: none;
 }
 
 a:hover {
@@ -66,6 +198,16 @@ a:hover {
   outline-offset: 4px;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  overflow: hidden;
+  clip: rect(0 0 0 0);
+  white-space: nowrap;
+  clip-path: inset(50%);
+}
+
 .skip-link {
   position: fixed;
   top: 12px;
@@ -73,9 +215,10 @@ a:hover {
   z-index: 1000;
   transform: translateY(-150%);
   border-radius: 999px;
-  background: var(--text);
-  color: var(--bg);
+  background: var(--accent);
+  color: var(--ink);
   padding: 10px 14px;
+  font-weight: 800;
 }
 
 .skip-link:focus {
@@ -87,27 +230,75 @@ a:hover {
   margin-inline: auto;
 }
 
+/*
+  Header and footer have no dividing rules. They are gradient zones: dense and
+  blurred against the page edge, dissolving to nothing as they meet content.
+  The treatment lives on a pseudo-element so the mask never fades the labels.
+
+  Note the deliberate absence of `isolation: isolate` here. Both elements are
+  positioned with a numeric z-index, so they already form a stacking context
+  that contains the `z-index: -1` pseudo-element. Adding `isolation` would also
+  make them a backdrop root, and the pseudo-element's backdrop-filter would then
+  have nothing behind it to blur.
+*/
+.site-header,
+.site-footer {
+  position: relative;
+  z-index: 10;
+}
+
 .site-header {
   position: sticky;
   top: 0;
   z-index: 20;
-  border-bottom: 1px solid color-mix(in srgb, var(--border), transparent 20%);
-  background: color-mix(in srgb, var(--bg), transparent 12%);
-  backdrop-filter: blur(18px);
+}
+
+.site-header::before,
+.site-footer::before {
+  position: absolute;
+  z-index: -1;
+  content: "";
+  pointer-events: none;
+}
+
+.site-header::before {
+  inset: 0 0 -72px;
+  background: linear-gradient(
+    to bottom,
+    rgb(4 3 8 / 0.88) 0%,
+    rgb(4 3 8 / 0.68) 34%,
+    rgb(4 3 8 / 0.26) 68%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to bottom, #000 0 46%, rgb(0 0 0 / 0.62) 72%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0 46%, rgb(0 0 0 / 0.62) 72%, transparent 100%);
+}
+
+.site-footer::before {
+  inset: -72px 0 0;
+  background: linear-gradient(
+    to top,
+    rgb(4 3 8 / 0.88) 0%,
+    rgb(4 3 8 / 0.68) 34%,
+    rgb(4 3 8 / 0.26) 68%,
+    transparent 100%
+  );
+  mask-image: linear-gradient(to top, #000 0 46%, rgb(0 0 0 / 0.62) 72%, transparent 100%);
+  -webkit-mask-image: linear-gradient(to top, #000 0 46%, rgb(0 0 0 / 0.62) 72%, transparent 100%);
 }
 
 .nav-shell {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  gap: 24px;
-  padding-block: 16px;
+  gap: 18px;
+  padding-block: 14px;
 }
 
 .brand {
+  font-size: 1.18rem;
   font-weight: 800;
   letter-spacing: -0.04em;
-  font-size: 1.18rem;
 }
 
 .site-nav {
@@ -118,9 +309,9 @@ a:hover {
 }
 
 .site-nav a {
-  min-height: 44px;
   display: inline-flex;
   align-items: center;
+  min-height: 44px;
   border-radius: 999px;
   padding: 8px 14px;
   color: var(--muted);
@@ -128,25 +319,43 @@ a:hover {
   transition: color 180ms ease, background 180ms ease;
 }
 
-.site-nav a:hover,
-.site-nav a[aria-current="page"] {
+.site-nav a:hover {
   background: var(--surface-strong);
   color: var(--text);
 }
 
+/* The current page is marked by a warm zone rather than an underline. */
+.site-nav a[aria-current="page"] {
+  background: linear-gradient(140deg, rgb(255 91 35 / 0.32), rgb(214 30 121 / 0.26));
+  color: var(--text);
+}
+
 .hero {
-  padding: clamp(36px, 6vw, 64px) 0 clamp(28px, 5vw, 48px);
+  position: relative;
+  isolation: isolate;
+  overflow-x: clip;
+  padding: clamp(44px, 7vw, 76px) 0 clamp(28px, 5vw, 48px);
+}
+
+/* A brighter ember bloom local to the hero, dissolving into the field. */
+.hero::before {
+  position: absolute;
+  z-index: -1;
+  inset: -30% -10% -45%;
+  content: "";
+  background: radial-gradient(ellipse 52% 78% at 24% 34%, rgb(255 91 35 / 0.3), transparent 70%);
+  filter: blur(18px);
+  mask-image: linear-gradient(to bottom, #000 0%, transparent 92%);
+  -webkit-mask-image: linear-gradient(to bottom, #000 0%, transparent 92%);
 }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: minmax(0, 1.3fr) minmax(280px, 0.7fr);
   gap: clamp(24px, 5vw, 56px);
   align-items: center;
 }
 
 .eyebrow,
-.panel-kicker,
 .card-meta {
   margin: 0 0 12px;
   color: var(--accent);
@@ -160,33 +369,27 @@ h1,
 h2,
 h3 {
   margin: 0;
-  letter-spacing: -0.055em;
-  line-height: 1.05;
+  letter-spacing: -0.02em;
+  line-height: 1.1;
 }
 
 h1 {
-  max-width: 12ch;
-  font-size: clamp(3.25rem, 10vw, 7.4rem);
-}
-
-.hero h1 {
-  max-width: 16ch;
-  font-size: clamp(2rem, 4.5vw, 3.5rem);
+  max-width: 18ch;
+  font-size: clamp(1.9rem, 3.5vw, 2.75rem);
 }
 
 h2 {
-  max-width: 16ch;
-  font-size: clamp(2.1rem, 5vw, 4rem);
+  max-width: 20ch;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
 }
 
 h3 {
-  font-size: clamp(1.3rem, 2.2vw, 1.75rem);
+  font-size: clamp(1.1rem, 1.6vw, 1.35rem);
 }
 
 .hero-text,
 .page-hero p,
 .content-card p,
-.feature-card p,
 .game-header p,
 .empty-panel p {
   color: var(--muted);
@@ -203,25 +406,21 @@ h3 {
   display: flex;
   flex-wrap: wrap;
   gap: 12px;
-  margin-top: 28px;
-}
-
-.hero-actions {
   margin-top: 22px;
 }
 
 .button {
-  min-height: 48px;
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  border: 1px solid var(--border);
+  min-height: 48px;
+  border: 0;
   border-radius: 999px;
-  padding: 12px 18px;
+  padding: 12px 20px;
   cursor: pointer;
   font: inherit;
   font-weight: 800;
-  transition: transform 180ms ease, background 180ms ease, border-color 180ms ease;
+  transition: transform 180ms ease, box-shadow 180ms ease, background 180ms ease;
 }
 
 .button:hover {
@@ -229,51 +428,33 @@ h3 {
 }
 
 .button.primary {
-  border-color: var(--accent);
-  background: var(--accent);
-  color: #fff;
+  background: linear-gradient(135deg, var(--zone-ember), var(--accent-magenta));
+  box-shadow: 0 12px 30px rgb(214 30 121 / 0.34);
+  color: var(--ink);
+}
+
+.button.primary:hover {
+  box-shadow: 0 16px 38px rgb(255 91 35 / 0.42);
 }
 
 .button.secondary {
-  background: var(--surface);
+  background: var(--surface-strong);
+  box-shadow: inset 0 0 0 1px var(--hairline);
   color: var(--text);
 }
 
-.hero-panel,
+.button.secondary:hover {
+  background: var(--accent-soft);
+  box-shadow: inset 0 0 0 1px var(--hairline-strong);
+}
+
+/* Panels are dark zones with a lit upper edge, not outlined boxes. */
 .empty-panel,
 .game-card,
-.content-card,
-.feature-card {
-  border: 1px solid var(--border);
+.content-card {
   border-radius: var(--radius);
-  background: color-mix(in srgb, var(--surface), transparent 4%);
-  box-shadow: var(--shadow);
-}
-
-.hero-panel {
-  padding: 28px;
-}
-
-.stat-list {
-  margin: 0;
-  display: grid;
-  gap: 18px;
-}
-
-.stat-list div {
-  border-top: 1px solid var(--border);
-  padding-top: 18px;
-}
-
-.stat-list dt {
-  color: var(--muted);
-  font-weight: 700;
-}
-
-.stat-list dd {
-  margin: 2px 0 0;
-  font-size: 1.4rem;
-  font-weight: 850;
+  background: var(--surface);
+  box-shadow: var(--shadow), inset 0 1px 0 var(--hairline);
 }
 
 .section-block {
@@ -288,32 +469,6 @@ h3 {
   margin-bottom: 24px;
 }
 
-.card-grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 16px;
-}
-
-.feature-card {
-  min-height: 220px;
-  padding: 24px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: transform 180ms ease, border-color 180ms ease;
-}
-
-.feature-card:hover {
-  border-color: var(--accent);
-  transform: translateY(-3px);
-}
-
-.feature-card span {
-  font-size: 1.45rem;
-  font-weight: 850;
-  letter-spacing: -0.04em;
-}
-
 .post-list {
   display: grid;
   gap: 16px;
@@ -324,22 +479,25 @@ h3 {
 }
 
 .content-card {
-  min-height: 190px;
-  padding: 22px;
+  position: relative;
   display: flex;
+  min-height: 190px;
   flex-direction: column;
   justify-content: space-between;
   gap: 24px;
+  padding: 22px;
+  transition: transform 180ms ease, box-shadow 180ms ease;
+}
+
+.content-card:hover {
+  box-shadow: var(--shadow), inset 0 1px 0 var(--hairline-strong), 0 0 0 1px rgb(255 138 76 / 0.28);
+  transform: translateY(-2px);
 }
 
 .content-card h3 a::after {
-  content: "";
   position: absolute;
   inset: 0;
-}
-
-.content-card {
-  position: relative;
+  content: "";
 }
 
 .text-link {
@@ -390,7 +548,7 @@ h3 {
 .content-body img {
   max-width: 100%;
   border-radius: 18px;
-  border: 1px solid var(--border);
+  box-shadow: var(--shadow);
 }
 
 .empty-panel {
@@ -398,7 +556,7 @@ h3 {
 }
 
 .empty-panel h2 {
-  font-size: clamp(1.8rem, 4vw, 3rem);
+  font-size: clamp(1.4rem, 2.5vw, 1.8rem);
 }
 
 .game-card {
@@ -417,11 +575,12 @@ h3 {
 }
 
 .guess-row input {
-  min-height: 48px;
   width: min(180px, 100%);
-  border: 1px solid var(--border);
+  min-height: 48px;
+  border: 0;
   border-radius: 999px;
-  background: var(--surface);
+  background: var(--surface-strong);
+  box-shadow: inset 0 0 0 1px var(--hairline);
   color: var(--text);
   padding: 12px 16px;
   font: inherit;
@@ -434,12 +593,13 @@ h3 {
   color: var(--muted);
 }
 
+/* Status reads as a warm zone fading to the right, rather than a ruled edge. */
 .game-status {
   margin-top: 18px;
-  border-left: 4px solid var(--accent);
-  padding: 10px 14px;
-  background: var(--surface-strong);
-  border-radius: 12px;
+  border-radius: 14px;
+  background: linear-gradient(to right, rgb(255 91 35 / 0.24), rgb(255 91 35 / 0.04) 55%, transparent);
+  padding: 12px 16px;
+  color: var(--text);
 }
 
 .guess-history {
@@ -457,31 +617,78 @@ h3 {
 }
 
 .site-footer {
-  border-top: 1px solid var(--border);
-  padding-block: 28px;
+  margin-top: auto;
   color: var(--muted);
 }
 
 .footer-grid {
   display: flex;
+  align-items: center;
   justify-content: space-between;
-  gap: 16px;
+  gap: 20px;
+  padding-block: 24px;
 }
 
-.footer-links {
+.footer-grid p {
+  margin: 0;
+}
+
+.footer-grid small {
+  display: inline-block;
+  margin-top: 4px;
+}
+
+.footer-links,
+.social-list {
+  margin: 0;
+  padding: 0;
+}
+
+.social-list {
   display: flex;
-  gap: 16px;
+  flex-wrap: wrap;
+  gap: 10px;
+  list-style: none;
+}
+
+.social-button {
+  display: inline-flex;
+  align-items: center;
+  min-height: 48px;
+  gap: 9px;
+  border-radius: 999px;
+  background: var(--surface-strong);
+  box-shadow: inset 0 0 0 1px var(--hairline);
+  padding: 10px 16px;
+  color: var(--text);
   font-weight: 800;
+  transition: color 180ms ease, background 180ms ease, box-shadow 180ms ease, transform 180ms ease;
+}
+
+.social-button svg {
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+
+.social-button:hover {
+  background: linear-gradient(140deg, rgb(255 91 35 / 0.34), rgb(214 30 121 / 0.28));
+  box-shadow: inset 0 0 0 1px var(--hairline-strong), 0 10px 24px rgb(214 30 121 / 0.3);
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+@supports (backdrop-filter: blur(1px)) {
+  .site-header::before,
+  .site-footer::before {
+    backdrop-filter: blur(22px) saturate(150%);
+    -webkit-backdrop-filter: blur(22px) saturate(150%);
+  }
 }
 
 @media (max-width: 960px) {
-  .hero-grid,
   .compact-list {
     grid-template-columns: 1fr;
-  }
-
-  .card-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
@@ -501,16 +708,37 @@ h3 {
     justify-content: flex-start;
   }
 
-  .card-grid {
-    grid-template-columns: 1fr;
-  }
-
   .hero {
     padding-top: 48px;
   }
 
-  .feature-card {
-    min-height: 168px;
+  .hero-copy::before,
+  .page-hero::before,
+  .section-heading::before,
+  .content-body::before,
+  .archive-list::before,
+  .empty-state::before {
+    inset: -28px -24px;
+  }
+}
+
+@media (forced-colors: active) {
+  .site-backdrop,
+  .hero::before,
+  .hero-copy::before,
+  .page-hero::before,
+  .section-heading::before,
+  .content-body::before,
+  .archive-list::before,
+  .empty-state::before {
+    display: none;
+  }
+
+  .site-header::before,
+  .site-footer::before,
+  .social-button {
+    background: Canvas;
+    box-shadow: none;
   }
 }
 

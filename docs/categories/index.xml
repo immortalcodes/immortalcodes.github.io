@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Categories on ImmortalCodes</title>
-    <link>http://localhost:35515/categories/</link>
+    <link>https://blogs.immortalcodes.com/categories/</link>
     <description>Recent content in Categories on ImmortalCodes</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <atom:link href="http://localhost:35515/categories/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blogs.immortalcodes.com/categories/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
