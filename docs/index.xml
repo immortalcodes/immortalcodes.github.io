@@ -6,8 +6,15 @@
     <description>Madhur Jain&#39;s personal site for engineering notes, projects, talks, and live browser experiments.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Aug 2026 00:15:57 +0530</lastBuildDate>
+    <lastBuildDate>Sun, 23 Aug 2026 00:32:13 +0530</lastBuildDate>
     <atom:link href="https://blogs.immortalcodes.com/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>How to Give Your 1st Conference Talk!</title>
+      <link>https://blogs.immortalcodes.com/posts/how-to-give-your-first-conference-talk/</link>
+      <pubDate>Sat, 22 Aug 2026 12:00:00 +0100</pubDate>
+      <guid>https://blogs.immortalcodes.com/posts/how-to-give-your-first-conference-talk/</guid>
+      <description>Every job hides a story worth telling. Here&#39;s how curiosity turns into a conference talk, and everything I wish someone had told me about CFPs before my first one.</description>
+    </item>
     <item>
       <title>Handmade Git Commands</title>
       <link>https://blogs.immortalcodes.com/posts/handmade-git-commands/</link>

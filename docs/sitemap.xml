@@ -2,19 +2,49 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>https://blogs.immortalcodes.com/games/code-breaker/</loc>
-    <lastmod>2026-08-17T00:00:00+05:30</lastmod>
+    <loc>https://blogs.immortalcodes.com/tags/ai/</loc>
+    <lastmod>2026-08-22T20:00:00+05:30</lastmod>
   </url><url>
     <loc>https://blogs.immortalcodes.com/</loc>
+    <lastmod>2026-08-22T20:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/tags/javascript/</loc>
+    <lastmod>2026-08-22T20:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/projects/lumina-studio/</loc>
+    <lastmod>2026-08-22T20:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/projects/</loc>
+    <lastmod>2026-08-22T20:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/tags/sideproject/</loc>
+    <lastmod>2026-08-22T20:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/tags/</loc>
+    <lastmod>2026-08-22T20:00:00+05:30</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/tags/career/</loc>
+    <lastmod>2026-08-22T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/tags/conference/</loc>
+    <lastmod>2026-08-22T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/posts/how-to-give-your-first-conference-talk/</loc>
+    <lastmod>2026-08-22T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/posts/</loc>
+    <lastmod>2026-08-22T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/tags/publicspeaking/</loc>
+    <lastmod>2026-08-22T12:00:00+01:00</lastmod>
+  </url><url>
+    <loc>https://blogs.immortalcodes.com/games/code-breaker/</loc>
     <lastmod>2026-08-17T00:00:00+05:30</lastmod>
   </url><url>
     <loc>https://blogs.immortalcodes.com/games/</loc>
     <lastmod>2026-08-17T00:00:00+05:30</lastmod>
   </url><url>
     <loc>https://blogs.immortalcodes.com/tags/canonical/</loc>
-    <lastmod>2026-08-08T13:40:00+08:00</lastmod>
-  </url><url>
-    <loc>https://blogs.immortalcodes.com/tags/conference/</loc>
     <lastmod>2026-08-08T13:40:00+08:00</lastmod>
   </url><url>
     <loc>https://blogs.immortalcodes.com/tags/juju/</loc>
@@ -26,9 +56,6 @@
     <loc>https://blogs.immortalcodes.com/tags/kubernetes/</loc>
     <lastmod>2026-08-08T13:40:00+08:00</lastmod>
   </url><url>
-    <loc>https://blogs.immortalcodes.com/tags/</loc>
-    <lastmod>2026-08-08T13:40:00+08:00</lastmod>
-  </url><url>
     <loc>https://blogs.immortalcodes.com/talks/</loc>
     <lastmod>2026-08-08T13:40:00+08:00</lastmod>
   </url><url>
@@ -36,9 +63,6 @@
     <lastmod>2025-08-06T12:00:00+01:00</lastmod>
   </url><url>
     <loc>https://blogs.immortalcodes.com/posts/handmade-git-commands/</loc>
-    <lastmod>2025-08-06T12:00:00+01:00</lastmod>
-  </url><url>
-    <loc>https://blogs.immortalcodes.com/posts/</loc>
     <lastmod>2025-08-06T12:00:00+01:00</lastmod>
   </url><url>
     <loc>https://blogs.immortalcodes.com/tags/react/</loc>
@@ -52,7 +76,5 @@
     <loc>https://blogs.immortalcodes.com/archive/</loc>
   </url><url>
     <loc>https://blogs.immortalcodes.com/categories/</loc>
-  </url><url>
-    <loc>https://blogs.immortalcodes.com/projects/</loc>
   </url>
 </urlset>
