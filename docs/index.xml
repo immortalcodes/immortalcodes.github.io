@@ -2,31 +2,24 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>ImmortalCodes</title>
-    <link>https://blogs.immortalcodes.com/</link>
+    <link>http://localhost:1313/</link>
     <description>Madhur Jain&#39;s personal site for engineering notes, projects, talks, and live browser experiments.</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en</language>
-    <lastBuildDate>Sun, 23 Aug 2026 00:32:13 +0530</lastBuildDate>
-    <atom:link href="https://blogs.immortalcodes.com/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How to Give Your 1st Conference Talk!</title>
-      <link>https://blogs.immortalcodes.com/posts/how-to-give-your-first-conference-talk/</link>
-      <pubDate>Sat, 22 Aug 2026 12:00:00 +0100</pubDate>
-      <guid>https://blogs.immortalcodes.com/posts/how-to-give-your-first-conference-talk/</guid>
-      <description>Every job hides a story worth telling. Here&#39;s how curiosity turns into a conference talk, and everything I wish someone had told me about CFPs before my first one.</description>
-    </item>
+    <lastBuildDate>Sun, 23 Aug 2026 00:32:37 +0530</lastBuildDate>
+    <atom:link href="http://localhost:1313/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Handmade Git Commands</title>
-      <link>https://blogs.immortalcodes.com/posts/handmade-git-commands/</link>
+      <link>http://localhost:1313/posts/handmade-git-commands/</link>
       <pubDate>Wed, 06 Aug 2025 12:00:00 +0100</pubDate>
-      <guid>https://blogs.immortalcodes.com/posts/handmade-git-commands/</guid>
+      <guid>http://localhost:1313/posts/handmade-git-commands/</guid>
       <description>Writing your custom git commands</description>
     </item>
     <item>
       <title>React ≠ Magic</title>
-      <link>https://blogs.immortalcodes.com/posts/react-is-no-magic/</link>
+      <link>http://localhost:1313/posts/react-is-no-magic/</link>
       <pubDate>Mon, 09 Jun 2025 12:00:00 +0100</pubDate>
-      <guid>https://blogs.immortalcodes.com/posts/react-is-no-magic/</guid>
+      <guid>http://localhost:1313/posts/react-is-no-magic/</guid>
       <description>Understanding workings of React</description>
     </item>
   </channel>

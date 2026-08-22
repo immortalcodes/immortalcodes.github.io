@@ -2,32 +2,25 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Posts on ImmortalCodes</title>
-    <link>https://blogs.immortalcodes.com/posts/</link>
+    <link>http://localhost:1313/posts/</link>
     <description>Recent content in Posts on ImmortalCodes</description>
     <generator>Hugo</generator>
     <language>en</language>
-    <lastBuildDate>Sat, 22 Aug 2026 12:00:00 +0100</lastBuildDate>
-    <atom:link href="https://blogs.immortalcodes.com/posts/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How to Give Your 1st Conference Talk!</title>
-      <link>https://blogs.immortalcodes.com/posts/how-to-give-your-first-conference-talk/</link>
-      <pubDate>Sat, 22 Aug 2026 12:00:00 +0100</pubDate>
-      <guid>https://blogs.immortalcodes.com/posts/how-to-give-your-first-conference-talk/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blogs.immortalcodes.com/images/first-conference-talk-cover.png&#34; alt=&#34;A speaker mid-talk, slide deck glowing behind them, audience in soft focus&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;the-goldmine-nobody-told-you-about&#34;&gt;The Goldmine Nobody Told You About&lt;/h2&gt;&#xA;&lt;p&gt;Here is something nobody tells you on day one of a new job: every role, at every company, if you do it right, quietly turns into a research project.&lt;/p&gt;&#xA;&lt;p&gt;You get handed a ticket. The ticket asks a small, boring question. And if you actually chase the answer instead of just closing the ticket, that question drags you sideways into a rabbit hole you did not know existed. Suddenly you are three tabs deep into a spec, then a mailing list thread from 2019, then someone&amp;rsquo;s changelog, then you are debugging something that was never really your job, purely because you have to know.&lt;/p&gt;</description>
-    </item>
+    <lastBuildDate>Wed, 06 Aug 2025 12:00:00 +0100</lastBuildDate>
+    <atom:link href="http://localhost:1313/posts/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Handmade Git Commands</title>
-      <link>https://blogs.immortalcodes.com/posts/handmade-git-commands/</link>
+      <link>http://localhost:1313/posts/handmade-git-commands/</link>
       <pubDate>Wed, 06 Aug 2025 12:00:00 +0100</pubDate>
-      <guid>https://blogs.immortalcodes.com/posts/handmade-git-commands/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blogs.immortalcodes.com/images/custom-git-commands.png&#34; alt=&#34;Custom git commands&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;handmake-your-git-commands-at-home&#34;&gt;Handmake your Git commands at home&lt;/h2&gt;&#xA;&lt;p&gt;Long story short, you can extend Git&amp;rsquo;s functionality by creating your own custom commands! It&amp;rsquo;s simpler than you think. Here are 3 steps:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create an &lt;strong&gt;executable binary&lt;/strong&gt; to do the things you want your git command to do. This could be a shell script, or a program in any language.&lt;/li&gt;&#xA;&lt;li&gt;Name it &lt;code&gt;git-&amp;lt;command-name&amp;gt;&lt;/code&gt;. For example, if you want a command called &lt;code&gt;git cleanup-branches&lt;/code&gt;, you&amp;rsquo;d name your script &lt;code&gt;git-cleanup-branches&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Put it in your &lt;strong&gt;$PATH&lt;/strong&gt; and make it executable (&lt;code&gt;chmod +x /path/to/your/script&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now you can use your new Git power via:&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/handmade-git-commands/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/custom-git-commands.png&#34; alt=&#34;Custom git commands&#34;&gt;&lt;/p&gt;&#xA;&lt;h2 id=&#34;handmake-your-git-commands-at-home&#34;&gt;Handmake your Git commands at home&lt;/h2&gt;&#xA;&lt;p&gt;Long story short, you can extend Git&amp;rsquo;s functionality by creating your own custom commands! It&amp;rsquo;s simpler than you think. Here are 3 steps:&lt;/p&gt;&#xA;&lt;ul&gt;&#xA;&lt;li&gt;Create an &lt;strong&gt;executable binary&lt;/strong&gt; to do the things you want your git command to do. This could be a shell script, or a program in any language.&lt;/li&gt;&#xA;&lt;li&gt;Name it &lt;code&gt;git-&amp;lt;command-name&amp;gt;&lt;/code&gt;. For example, if you want a command called &lt;code&gt;git cleanup-branches&lt;/code&gt;, you&amp;rsquo;d name your script &lt;code&gt;git-cleanup-branches&lt;/code&gt;.&lt;/li&gt;&#xA;&lt;li&gt;Put it in your &lt;strong&gt;$PATH&lt;/strong&gt; and make it executable (&lt;code&gt;chmod +x /path/to/your/script&lt;/code&gt;).&lt;/li&gt;&#xA;&lt;/ul&gt;&#xA;&lt;p&gt;Now you can use your new Git power via:&lt;/p&gt;</description>
     </item>
     <item>
       <title>React ≠ Magic</title>
-      <link>https://blogs.immortalcodes.com/posts/react-is-no-magic/</link>
+      <link>http://localhost:1313/posts/react-is-no-magic/</link>
       <pubDate>Mon, 09 Jun 2025 12:00:00 +0100</pubDate>
-      <guid>https://blogs.immortalcodes.com/posts/react-is-no-magic/</guid>
-      <description>&lt;p&gt;&lt;img src=&#34;https://blogs.immortalcodes.com/images/react_cover_2.png&#34; alt=&#34;React Cover&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;under-the-hood-of-react-why-it-feels-like-magic-but-isnt&#34;&gt;Under the Hood of React: Why It Feels Like Magic (But Isn’t)&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-this-blog&#34;&gt;Why this Blog&lt;/h2&gt;&#xA;&lt;p&gt;Back in school days starting with web development was fairly simple — HTML formed the structure, CSS was all beautiful decorations (and some movements), and JS brought logic and life to the site.&lt;/p&gt;&#xA;&lt;p&gt;But, as any dev would have it, I encountered React. And oh boy, it seemed magical — yes, almost like you now know the language of elves and can now craft spectacular &lt;em&gt;Elden sites&lt;/em&gt;.&lt;/p&gt;</description>
+      <guid>http://localhost:1313/posts/react-is-no-magic/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;http://localhost:1313/images/react_cover_2.png&#34; alt=&#34;React Cover&#34;&gt;&lt;/p&gt;&#xA;&lt;h1 id=&#34;under-the-hood-of-react-why-it-feels-like-magic-but-isnt&#34;&gt;Under the Hood of React: Why It Feels Like Magic (But Isn’t)&lt;/h1&gt;&#xA;&lt;h2 id=&#34;why-this-blog&#34;&gt;Why this Blog&lt;/h2&gt;&#xA;&lt;p&gt;Back in school days starting with web development was fairly simple — HTML formed the structure, CSS was all beautiful decorations (and some movements), and JS brought logic and life to the site.&lt;/p&gt;&#xA;&lt;p&gt;But, as any dev would have it, I encountered React. And oh boy, it seemed magical — yes, almost like you now know the language of elves and can now craft spectacular &lt;em&gt;Elden sites&lt;/em&gt;.&lt;/p&gt;</description>
     </item>
   </channel>
 </rss>

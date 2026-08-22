@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Talks on ImmortalCodes</title>
-    <link>https://blogs.immortalcodes.com/talks/</link>
+    <link>http://localhost:1313/talks/</link>
     <description>Recent content in Talks on ImmortalCodes</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 08 Aug 2026 13:40:00 +0800</lastBuildDate>
-    <atom:link href="https://blogs.immortalcodes.com/talks/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="http://localhost:1313/talks/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Juju Does Everything. Here Is What That Is Like.</title>
-      <link>https://blogs.immortalcodes.com/talks/juju-does-everything/</link>
+      <link>http://localhost:1313/talks/juju-does-everything/</link>
       <pubDate>Sat, 08 Aug 2026 13:40:00 +0800</pubDate>
-      <guid>https://blogs.immortalcodes.com/talks/juju-does-everything/</guid>
+      <guid>http://localhost:1313/talks/juju-does-everything/</guid>
       <description>Notes from my UbuCon Asia 2026 talk in Taipei, covering Juju&amp;rsquo;s relation protocol, a live demo, and a debugging cheat sheet.</description>
     </item>
   </channel>
