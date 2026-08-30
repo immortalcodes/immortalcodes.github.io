@@ -21,8 +21,8 @@ The build is actual copy pasted into the /docs folder because that is the root o
   by itself, a request to publish.
 
 ### Fast path: content-only edits
-If a change is limited to creating or editing files under `content/` (posts, projects, talks,
-games) with no layout, CSS, JS, or theme changes:
+If a change is limited to creating or editing files under `content/` (posts, projects, talks)
+with no layout, CSS, JS, or theme changes:
 - Skip the "ask a lot of questions" step for routine edits (typos, new post drafts, wording,
   metadata). Only ask clarifying questions if the request is genuinely ambiguous (e.g. unclear
   which post, unclear topic/angle).

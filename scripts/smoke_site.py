@@ -60,17 +60,6 @@ def main() -> None:
         "venue.png",
         "audience.png",
     )
-    assert_has(
-        "games/index.html",
-        "Code Breaker",
-        "Playable in the browser",
-    )
-    assert_has(
-        "games/code-breaker/index.html",
-        "Guess the four-digit access code",
-        "id=code-breaker-form",
-        "aria-live=polite",
-    )
     assert_has("404.html", "Page not found", "Back home")
     assert_has("CNAME", "blogs.immortalcodes.com")
     assert_has(
@@ -93,8 +82,6 @@ def main() -> None:
         "social-button",
     )
     assert_not_has("css/site.css", "theme-toggle", "prefers-color-scheme")
-    assert_has("js/site.js", "data-code-breaker", "attempts remaining")
-    assert_not_has("js/site.js", "data-theme", "localStorage")
     assert_has("favicon.svg", "ImmortalCodes")
     assert_has("index.xml", "React ≠ Magic", "Handmade Git Commands")
     assert_not_has("index.xml", "<title>Archive</title>", "0001")

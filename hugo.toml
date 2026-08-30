@@ -43,16 +43,11 @@ url = "/talks/"
 weight = 30
 
 [[menus.main]]
-name = "Games"
-url = "/games/"
-weight = 40
-
-[[menus.main]]
 name = "Blog"
 url = "/posts/"
-weight = 50
+weight = 40
 
 [[menus.main]]
 name = "Archive"
 url = "/archive/"
-weight = 60
+weight = 50

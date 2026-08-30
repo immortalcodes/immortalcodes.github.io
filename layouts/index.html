@@ -6,8 +6,8 @@
       <h1>A space to collect my ideas and experiments.</h1>
       <p class="hero-text">{{ .Site.Params.intro }}</p>
       <div class="hero-actions">
-        <a class="button primary" href="{{ "/games/code-breaker/" | relURL }}">Play Code Breaker</a>
-        <a class="button secondary" href="{{ "/posts/" | relURL }}">Read the blog</a>
+        <a class="button primary" href="{{ "/posts/" | relURL }}">Read the blog</a>
+        <a class="button secondary" href="{{ "/projects/" | relURL }}">View projects</a>
       </div>
     </div>
   </div>
@@ -18,10 +18,21 @@
     <h2 id="latest-heading" class="eyebrow">Latest writing</h2>
   </div>
   <div class="post-list compact-list">
-    {{- range first 3 (where .Site.RegularPages "Section" "posts") }}
+    {{- /* Show the single most recent item from each of posts/projects/talks,
+       sorted newest first, so the homepage always surfaces variety instead
+       of being dominated by whichever section publishes most often. */ -}}
+    {{- $seenSections := slice -}}
+    {{- $latest := slice -}}
+    {{- range .Site.RegularPages.ByDate.Reverse }}
+      {{- if and (lt (len $latest) 3) (not (in $seenSections .Section)) }}
+        {{- $seenSections = $seenSections | append .Section }}
+        {{- $latest = $latest | append . }}
+      {{- end }}
+    {{- end }}
+    {{- range $latest }}
       {{ partial "card.html" . }}
     {{- else }}
-      <p class="empty-state">No posts published yet.</p>
+      <p class="empty-state">Nothing published yet.</p>
     {{- end }}
   </div>
 </section>
