@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on ImmortalCodes</title>
-    <link>http://localhost:1313/projects/</link>
+    <link>https://blogs.immortalcodes.com/projects/</link>
     <description>Recent content in Projects on ImmortalCodes</description>
     <generator>Hugo</generator>
     <language>en</language>
     <lastBuildDate>Sat, 22 Aug 2026 20:00:00 +0530</lastBuildDate>
-    <atom:link href="http://localhost:1313/projects/index.xml" rel="self" type="application/rss+xml" />
+    <atom:link href="https://blogs.immortalcodes.com/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Lumina Studio: A Zero Dependency AI Creative Suite</title>
-      <link>http://localhost:1313/projects/lumina-studio/</link>
+      <link>https://blogs.immortalcodes.com/projects/lumina-studio/</link>
       <pubDate>Sat, 22 Aug 2026 20:00:00 +0530</pubDate>
-      <guid>http://localhost:1313/projects/lumina-studio/</guid>
+      <guid>https://blogs.immortalcodes.com/projects/lumina-studio/</guid>
       <description>Notes on building Lumina Studio, a cinematic AI creative suite with zero frontend dependencies, dynamic model discovery, and local asset persistence.</description>
     </item>
   </channel>

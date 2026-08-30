@@ -42,8 +42,7 @@ def main() -> None:
     assert_has(
         "projects/index.html",
         "Projects",
-        "No project write-ups yet",
-        "Write-ups for shipped work and experiments will appear here.",
+        "Lumina Studio: A Zero Dependency AI Creative Suite",
         "aria-current=page>Projects",
     )
     assert_has(
